@@ -1,11 +1,11 @@
-import { galleryItems } from './gallery-items.js';
+import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
 console.log(galleryItems);
 const listEl = document.querySelector(".gallery");
 
 // Crearea și randarea unui marcaj pe baza datelor din matricea de date galleryItems
-galleryItems.forEach(item => {
+galleryItems.forEach((item) => {
   const listItem = document.createElement("li");
   listItem.classList.add("gallery__item");
   listItem.innerHTML = `
@@ -27,8 +27,8 @@ let instance;
 
 function openImageInModal(event) {
   event.preventDefault();
-  
-  if (event.target.nodeName !== 'IMG') {
+
+  if (event.target.nodeName !== "IMG") {
     return;
   }
 
@@ -49,6 +49,3 @@ function onEscPress(event) {
     document.removeEventListener("keydown", onEscPress);
   }
 }
-
-
-   
